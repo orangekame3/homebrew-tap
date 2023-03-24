@@ -5,20 +5,20 @@
 class Tftarget < Formula
   desc ""
   homepage ""
-  version "0.0.29"
+  version "0.0.30"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.29/tftarget_Darwin_x86_64.tar.gz"
-      sha256 "b43f719b81938ffcf6744e62de1cc100251ec0a2580045b48563508c10e62f1b"
+      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.30/tftarget_Darwin_x86_64.tar.gz"
+      sha256 "0f3d9b375479808724f33878258f34ac760e69460bf018e4f95ef3b5273cefcf"
 
       def install
         bin.install "tftarget"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.29/tftarget_Darwin_arm64.tar.gz"
-      sha256 "64f2241402fb8878630f8c37edac1110fcc1eac4849abf273c8a78a3cf505312"
+      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.30/tftarget_Darwin_arm64.tar.gz"
+      sha256 "471214be39ef2f97f9dec77a9b1317517b4031ed7246ce1294e719146466dca0"
 
       def install
         bin.install "tftarget"
@@ -28,16 +28,16 @@ class Tftarget < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.29/tftarget_Linux_x86_64.tar.gz"
-      sha256 "7f028afd9d22b358ebe88830dcd2c88704183e622199ce33ba97f58af70fe4fc"
+      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.30/tftarget_Linux_x86_64.tar.gz"
+      sha256 "655cdef9fc19937846e6cb5b6c92b5e6e7f2b76a21464815064a45894b08c944"
 
       def install
         bin.install "tftarget"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.29/tftarget_Linux_arm64.tar.gz"
-      sha256 "bbca33514af717493403302eb4871cd143a5b504c66db60af2ad9c3586ef9591"
+      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.30/tftarget_Linux_arm64.tar.gz"
+      sha256 "645c1a35e5f9b444a800e3d7ff34394b996648f3286d7cb7439ce9b68019941b"
 
       def install
         bin.install "tftarget"
