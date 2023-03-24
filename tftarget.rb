@@ -5,20 +5,20 @@
 class Tftarget < Formula
   desc ""
   homepage ""
-  version "0.0.31"
+  version "0.0.32"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.31/tftarget_Darwin_arm64.tar.gz"
-      sha256 "35a9a9730fa41d8695f6fa6f8493175f1c0821d1d13c9f99d9ee93d94b9d9bfb"
+      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.32/tftarget_Darwin_arm64.tar.gz"
+      sha256 "defea680a767b0efa018cfe250a054c987488f6812e851f24b3c9612346d4b26"
 
       def install
         bin.install "tftarget"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.31/tftarget_Darwin_x86_64.tar.gz"
-      sha256 "551ff3d87f8980eb13e6c7f2a6ba7e3a54aaac9ca49b57c51f1c4a70899cfdee"
+      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.32/tftarget_Darwin_x86_64.tar.gz"
+      sha256 "ffc6b1a80b898c74a353bb99fc7f8a0f602b15470a19e9e0194514decd96a832"
 
       def install
         bin.install "tftarget"
@@ -27,17 +27,17 @@ class Tftarget < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.31/tftarget_Linux_arm64.tar.gz"
-      sha256 "e3cf7c1c4ee5a849a2480fe9ab37a62cc330b1d0aec4c4439578db05b39a43d8"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.32/tftarget_Linux_x86_64.tar.gz"
+      sha256 "c180427c214458ab283275babd93c31d9851fc4fd66ed044a0a11b4d61b87315"
 
       def install
         bin.install "tftarget"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.31/tftarget_Linux_x86_64.tar.gz"
-      sha256 "466068c7f112e87208e29762f26f5c189ba2be66febb6dd4284ed443ee57918e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/orangekame3/tftarget/releases/download/v0.0.32/tftarget_Linux_arm64.tar.gz"
+      sha256 "6ac092ec0a69d25588bb63082ca7a645a57d04bc4e38243f332d968726742995"
 
       def install
         bin.install "tftarget"
