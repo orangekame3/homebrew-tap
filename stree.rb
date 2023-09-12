@@ -5,20 +5,20 @@
 class Stree < Formula
   desc ""
   homepage ""
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.2/stree_Darwin_arm64.tar.gz"
-      sha256 "3f61fb88857a17e11690e11f2d1cf312590b441b8021c7bfe51abaae8cd0cfa5"
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.3/stree_Darwin_arm64.tar.gz"
+      sha256 "bf2d7b165c5488fd4a1510d1d9b31ebde7b664cbadf732cd81ba13bfa1db3558"
 
       def install
         bin.install "stree"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.2/stree_Darwin_x86_64.tar.gz"
-      sha256 "28c4f4bc35afab4a4c59336aecd88223110177a5bd7622eead7181f4807be85a"
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.3/stree_Darwin_x86_64.tar.gz"
+      sha256 "b06e1bfd8f75c536e5ec52d6046bd84031cd8fad37c0c5f47d779fbf870dd55d"
 
       def install
         bin.install "stree"
@@ -27,17 +27,17 @@ class Stree < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.2/stree_Linux_arm64.tar.gz"
-      sha256 "bc4558c986e603609dc580de71ab721916c1cb93a379b2aff0d401e58b5f907e"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.3/stree_Linux_x86_64.tar.gz"
+      sha256 "2a25232b08d2d8290c452287fe964d8de21ad8015af03116c1ebb0241f344fec"
 
       def install
         bin.install "stree"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.2/stree_Linux_x86_64.tar.gz"
-      sha256 "da5ad229eede7c41af8d22ea3780fff717ef298f845dbfecb04dbd13d62d2f93"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.3/stree_Linux_arm64.tar.gz"
+      sha256 "b91e762e53d1d46e307be33eede6c74edf14f681eb069b887b9a1ef9fbc59298"
 
       def install
         bin.install "stree"
