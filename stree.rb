@@ -5,20 +5,20 @@
 class Stree < Formula
   desc ""
   homepage ""
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.1/stree_Darwin_x86_64.tar.gz"
-      sha256 "652b3ae95a08c308c250f801d68bf19d7e11981441ec65c54e1cece49a87d3be"
+    if Hardware::CPU.arm?
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.2/stree_Darwin_arm64.tar.gz"
+      sha256 "3f61fb88857a17e11690e11f2d1cf312590b441b8021c7bfe51abaae8cd0cfa5"
 
       def install
         bin.install "stree"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.1/stree_Darwin_arm64.tar.gz"
-      sha256 "29df04138a8c17dbaefaf0d83492410086ef955ecd3def5553c36425d1d00499"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.2/stree_Darwin_x86_64.tar.gz"
+      sha256 "28c4f4bc35afab4a4c59336aecd88223110177a5bd7622eead7181f4807be85a"
 
       def install
         bin.install "stree"
@@ -28,16 +28,16 @@ class Stree < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.1/stree_Linux_arm64.tar.gz"
-      sha256 "e9b945ddd4018afa3fbcfa801936a7a91b36cb758cd62fede2fb050768b69f01"
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.2/stree_Linux_arm64.tar.gz"
+      sha256 "bc4558c986e603609dc580de71ab721916c1cb93a379b2aff0d401e58b5f907e"
 
       def install
         bin.install "stree"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.1/stree_Linux_x86_64.tar.gz"
-      sha256 "c330ad612b37434c23d52e0ed4691aa49332ac93dc94a5f6ddded7d35c211a24"
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.2/stree_Linux_x86_64.tar.gz"
+      sha256 "da5ad229eede7c41af8d22ea3780fff717ef298f845dbfecb04dbd13d62d2f93"
 
       def install
         bin.install "stree"
