@@ -5,20 +5,20 @@
 class Viff < Formula
   desc ""
   homepage ""
-  version "0.0.10"
+  version "0.0.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/viff/releases/download/v0.0.10/viff_Darwin_x86_64.tar.gz"
-      sha256 "9382f7a831ff5592ccd205ef46ac58e4e7d3fda731ef7a69f8ff8eb4b59de29c"
+      url "https://github.com/orangekame3/viff/releases/download/v0.0.11/viff_Darwin_x86_64.tar.gz"
+      sha256 "1aea1a9e714f91620905d1ac9f4154a6a22d7501637aacc113733edf9fcc948b"
 
       def install
         bin.install "viff"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/viff/releases/download/v0.0.10/viff_Darwin_arm64.tar.gz"
-      sha256 "0a2893b0ecb7929578c6b471f3cece18a29c906ef2c37243c459adb9b3d08b18"
+      url "https://github.com/orangekame3/viff/releases/download/v0.0.11/viff_Darwin_arm64.tar.gz"
+      sha256 "ee1669a00cde8fd0e7814c79cd0302da4344022f904eac7c88658f3c2f68b75b"
 
       def install
         bin.install "viff"
@@ -28,16 +28,16 @@ class Viff < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/viff/releases/download/v0.0.10/viff_Linux_arm64.tar.gz"
-      sha256 "98c2eb7622b90afef28ea3bc01c675a957bcd975eef5eff679e39f5663d3222d"
+      url "https://github.com/orangekame3/viff/releases/download/v0.0.11/viff_Linux_arm64.tar.gz"
+      sha256 "af8415c3c79851f2bb5e721275a28c169769ae3fa4b9f9d3ae5585fff767fae6"
 
       def install
         bin.install "viff"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/viff/releases/download/v0.0.10/viff_Linux_x86_64.tar.gz"
-      sha256 "638b112dbd6ef76895a38cee06ed88c9500168f200ada956d8f5e74d0ca31105"
+      url "https://github.com/orangekame3/viff/releases/download/v0.0.11/viff_Linux_x86_64.tar.gz"
+      sha256 "c8eb67bb648c706828dea2c96d5be72763940320fdee456d03763c7df3118c6a"
 
       def install
         bin.install "viff"
