@@ -5,20 +5,20 @@
 class Viff < Formula
   desc ""
   homepage ""
-  version "0.0.9"
+  version "0.0.10"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/viff/releases/download/v0.0.9/viff_Darwin_arm64.tar.gz"
-      sha256 "75cdc50feabaefe3448eef01b1585221594db0310f85c97c33656a3db049b6f0"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/viff/releases/download/v0.0.10/viff_Darwin_x86_64.tar.gz"
+      sha256 "9382f7a831ff5592ccd205ef46ac58e4e7d3fda731ef7a69f8ff8eb4b59de29c"
 
       def install
         bin.install "viff"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/viff/releases/download/v0.0.9/viff_Darwin_x86_64.tar.gz"
-      sha256 "7513d5edf44de10d3c87f67f9121dd400480ea5323a46f892d71a4822e2eb18e"
+    if Hardware::CPU.arm?
+      url "https://github.com/orangekame3/viff/releases/download/v0.0.10/viff_Darwin_arm64.tar.gz"
+      sha256 "0a2893b0ecb7929578c6b471f3cece18a29c906ef2c37243c459adb9b3d08b18"
 
       def install
         bin.install "viff"
@@ -28,16 +28,16 @@ class Viff < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/viff/releases/download/v0.0.9/viff_Linux_arm64.tar.gz"
-      sha256 "b666f174722dee1f51f6b9684ccfbcd3496c74efe0c542f53bf561c349ebe238"
+      url "https://github.com/orangekame3/viff/releases/download/v0.0.10/viff_Linux_arm64.tar.gz"
+      sha256 "98c2eb7622b90afef28ea3bc01c675a957bcd975eef5eff679e39f5663d3222d"
 
       def install
         bin.install "viff"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/viff/releases/download/v0.0.9/viff_Linux_x86_64.tar.gz"
-      sha256 "7ca57c1ddfe58072fb7b9316bfd7fc6fba7c50b2baebdefe0cc461a2ba6b057c"
+      url "https://github.com/orangekame3/viff/releases/download/v0.0.10/viff_Linux_x86_64.tar.gz"
+      sha256 "638b112dbd6ef76895a38cee06ed88c9500168f200ada956d8f5e74d0ca31105"
 
       def install
         bin.install "viff"
