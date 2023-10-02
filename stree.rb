@@ -5,20 +5,20 @@
 class Stree < Formula
   desc ""
   homepage ""
-  version "0.0.10"
+  version "0.0.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.10/stree_Darwin_x86_64.tar.gz"
-      sha256 "929ecd5118fc029840b7f2c066c2c635bafe13dee73ce512f8e3f240fe75bdfd"
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.11/stree_Darwin_x86_64.tar.gz"
+      sha256 "802af20e24c9a5c21f5ee5c9d823e88b5b2a89b891f2b638f478dcff2f8c2457"
 
       def install
         bin.install "stree"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.10/stree_Darwin_arm64.tar.gz"
-      sha256 "249b669cb57b8950204622244fd0f33f8138f18a28bb81574105614fdb6972f1"
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.11/stree_Darwin_arm64.tar.gz"
+      sha256 "6e751705b5c830947ed8080fa685c7ae7a3591cc96b69c25d5cebdeb6443fd78"
 
       def install
         bin.install "stree"
@@ -28,16 +28,16 @@ class Stree < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.10/stree_Linux_x86_64.tar.gz"
-      sha256 "33103655013a109f17ad009b245dda1c69b06a180978d3e1d473665f8dd2d948"
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.11/stree_Linux_x86_64.tar.gz"
+      sha256 "046c90e7615b4461cfe527e55dbc75285900d825a924fcb9f7f4cc4fc649e00f"
 
       def install
         bin.install "stree"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.10/stree_Linux_arm64.tar.gz"
-      sha256 "5e51bce54f4f9899a24683442dbf3476dadded90b2e3ad1a31e407aa02109f54"
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.11/stree_Linux_arm64.tar.gz"
+      sha256 "9b36d463c3e1adf3971805e51f2ddd56dc72745a4b979c480e85bcfb6e0acde3"
 
       def install
         bin.install "stree"
