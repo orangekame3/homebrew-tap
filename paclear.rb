@@ -5,20 +5,20 @@
 class Paclear < Formula
   desc ""
   homepage ""
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.5/paclear_Darwin_arm64.tar.gz"
-      sha256 "e8f317565eee6ad61bdf7d13277f6da96c9e877fce6ea40f072368b0f86f7966"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.6/paclear_Darwin_x86_64.tar.gz"
+      sha256 "92a44f6381c39bf07becdedd7a13229b03b776d15e5509c5ab3d9cf98e85ee6e"
 
       def install
         bin.install "paclear"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.5/paclear_Darwin_x86_64.tar.gz"
-      sha256 "7d48fc6c47071f9c29464d60eb9b3b768201343f185617af71b33545a1721617"
+    if Hardware::CPU.arm?
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.6/paclear_Darwin_arm64.tar.gz"
+      sha256 "a8323eb7d97cda07e6b03c1aadc16c815a588559f964de2a658c2fe31863d1de"
 
       def install
         bin.install "paclear"
@@ -27,17 +27,17 @@ class Paclear < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.5/paclear_Linux_x86_64.tar.gz"
-      sha256 "ae5af7066498de0e50eee9a07fbba2c78cc054ec526d861f0236383086aa266d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.6/paclear_Linux_arm64.tar.gz"
+      sha256 "131644948a0bfccf87b4a625f61166dba9cbf1d977590459ed274b937e671c79"
 
       def install
         bin.install "paclear"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.5/paclear_Linux_arm64.tar.gz"
-      sha256 "aea700d210f7aea818ae24d2a4aad45fccbe8bca588bcdbd6d24bbddc187a98e"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.6/paclear_Linux_x86_64.tar.gz"
+      sha256 "7c8d1730e0fc88342e6e65ae2b256d50cb662497c226416bf9e7508b670334f8"
 
       def install
         bin.install "paclear"
