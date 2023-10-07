@@ -5,20 +5,20 @@
 class CobraTemplate < Formula
   desc ""
   homepage ""
-  version "0.0.7"
+  version "0.0.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.7/cobra-template_Darwin_x86_64.tar.gz"
-      sha256 "1b12cd39ff5f4626abb250c4d4c6031bc35e94b28e7e48ad95915ab91c425f48"
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.8/cobra-template_Darwin_x86_64.tar.gz"
+      sha256 "77a45c82406c1a660b9fbe39cfd620e290af9f8d973791e058464a60047972ed"
 
       def install
         bin.install "cobra-template"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.7/cobra-template_Darwin_arm64.tar.gz"
-      sha256 "ca82146f303c8b7a11f22f2bae43beccd1a4b807dc2b1c446a96f4d213778b59"
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.8/cobra-template_Darwin_arm64.tar.gz"
+      sha256 "f32586190332e11a6e17f2380cbf20d1ab0130d48f2cc61c62b9def13ac50363"
 
       def install
         bin.install "cobra-template"
@@ -28,16 +28,16 @@ class CobraTemplate < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.7/cobra-template_Linux_arm64.tar.gz"
-      sha256 "266d97784bd028421ec8fb5598abe650e08be2761ba82ad9775d28e91ab5ae91"
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.8/cobra-template_Linux_arm64.tar.gz"
+      sha256 "205ca8b1c6d41e1f838828c46198a73412171cf47719725aef885e5692606e1e"
 
       def install
         bin.install "cobra-template"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.7/cobra-template_Linux_x86_64.tar.gz"
-      sha256 "a782f5162207b3983abb8b1aabaabdb263f093f4216fc33fb3574db7d08a5cc1"
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.8/cobra-template_Linux_x86_64.tar.gz"
+      sha256 "7ddf4aec14bb2e8906cb1b632f11c77c1c116ec19fb06fb416a7453cea48dcc3"
 
       def install
         bin.install "cobra-template"
