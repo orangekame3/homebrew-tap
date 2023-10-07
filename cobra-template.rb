@@ -5,20 +5,20 @@
 class CobraTemplate < Formula
   desc ""
   homepage ""
-  version "0.0.8"
+  version "0.0.9"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.8/cobra-template_Darwin_x86_64.tar.gz"
-      sha256 "77a45c82406c1a660b9fbe39cfd620e290af9f8d973791e058464a60047972ed"
+    if Hardware::CPU.arm?
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.9/cobra-template_Darwin_arm64.tar.gz"
+      sha256 "ec23daec8a0d5c11e1206d696cc48b7dd6991f7bf72066399579775fcb2ed72a"
 
       def install
         bin.install "cobra-template"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.8/cobra-template_Darwin_arm64.tar.gz"
-      sha256 "f32586190332e11a6e17f2380cbf20d1ab0130d48f2cc61c62b9def13ac50363"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.9/cobra-template_Darwin_x86_64.tar.gz"
+      sha256 "43c23248c4801c1425421c7d9cb71588fdafc0898f8e223b2f7ee889d1f88a3d"
 
       def install
         bin.install "cobra-template"
@@ -27,17 +27,17 @@ class CobraTemplate < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.8/cobra-template_Linux_arm64.tar.gz"
-      sha256 "205ca8b1c6d41e1f838828c46198a73412171cf47719725aef885e5692606e1e"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.9/cobra-template_Linux_x86_64.tar.gz"
+      sha256 "3d3271ca5cf3fdaab2150c584b3acc6db533ccf32f43c9e8b571a4fc0e22ebb3"
 
       def install
         bin.install "cobra-template"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.8/cobra-template_Linux_x86_64.tar.gz"
-      sha256 "7ddf4aec14bb2e8906cb1b632f11c77c1c116ec19fb06fb416a7453cea48dcc3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.9/cobra-template_Linux_arm64.tar.gz"
+      sha256 "32c91554bb7c998d29f744ebd83c10c8042cf0d34a919e0d392ca11f9dd256a9"
 
       def install
         bin.install "cobra-template"
