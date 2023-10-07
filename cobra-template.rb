@@ -5,20 +5,20 @@
 class CobraTemplate < Formula
   desc ""
   homepage ""
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.4/cobra-template_Darwin_arm64.tar.gz"
-      sha256 "4332f36c92a69f6e9316d1b037a47925d90d371f412e386d4ab572efa7ffdb49"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.5/cobra-template_Darwin_x86_64.tar.gz"
+      sha256 "143f4b3f6de82d324065bf74940c9af60b9e316e0a7ad306e0f5e0b8782eee58"
 
       def install
         bin.install "cobra-template"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.4/cobra-template_Darwin_x86_64.tar.gz"
-      sha256 "18002c9f6422d11d30fe17e102408a574fecc191f6cd2683975376f592cb44fb"
+    if Hardware::CPU.arm?
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.5/cobra-template_Darwin_arm64.tar.gz"
+      sha256 "03978e9135104f954ceb8b20aa2ff30a5105516992b1f5d0f934cd5cbfc9f91d"
 
       def install
         bin.install "cobra-template"
@@ -28,16 +28,16 @@ class CobraTemplate < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.4/cobra-template_Linux_x86_64.tar.gz"
-      sha256 "35df34e071dacb308e9f3c80e9a47da80700342c04820d74bfd629a99ca368b6"
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.5/cobra-template_Linux_x86_64.tar.gz"
+      sha256 "a64222e98d8e5549f410342291c7c905ee236fb4274bb20e9f41025c8769f4bb"
 
       def install
         bin.install "cobra-template"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.4/cobra-template_Linux_arm64.tar.gz"
-      sha256 "9c53167b30ca753bce9367aa6704762d9d373afd001b249e1b192c3a8e30a04c"
+      url "https://github.com/orangekame3/cobra-template/releases/download/v0.0.5/cobra-template_Linux_arm64.tar.gz"
+      sha256 "1acc1733cbdca630da5cf2e586127efac60ad42358bdbfd61ec467f97a2d92d9"
 
       def install
         bin.install "cobra-template"
