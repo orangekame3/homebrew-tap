@@ -5,20 +5,20 @@
 class Paclear < Formula
   desc ""
   homepage ""
-  version "0.0.9"
+  version "0.0.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.9/paclear_Darwin_x86_64.tar.gz"
-      sha256 "38914849afc2645ef1bade8459f3b4bc6974a76cdf9374f395adb76db719aefe"
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.10/paclear_Darwin_x86_64.tar.gz"
+      sha256 "29b2a337c627ccbe86cc96eb5a46f7539cf4d808ebb037c49ead7b908712881d"
 
       def install
         bin.install "paclear"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.9/paclear_Darwin_arm64.tar.gz"
-      sha256 "49acaa67d7fb14ecd83a570a90e05a0a9ceeccd0e13cf3b1153c3febbed0f52f"
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.10/paclear_Darwin_arm64.tar.gz"
+      sha256 "513d1970a7eacf7c7245730b53b0effeb79a0754a4c4c6ea3262a7cac71ff68e"
 
       def install
         bin.install "paclear"
@@ -28,16 +28,16 @@ class Paclear < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.9/paclear_Linux_arm64.tar.gz"
-      sha256 "e02161498094ab6ed6836dd447dabf6bf21594ae7191ef8cb09335ab0d5fede9"
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.10/paclear_Linux_arm64.tar.gz"
+      sha256 "eb726f2aa466e5bf3f0a21d9f8f7291533afef3ce263377c9dca01dc9ddb4113"
 
       def install
         bin.install "paclear"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.9/paclear_Linux_x86_64.tar.gz"
-      sha256 "2742b8ea7d682272dad655fab16c5cd9eb3bc55d17f7ad6a4ae019d51d7dd5fa"
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.10/paclear_Linux_x86_64.tar.gz"
+      sha256 "0ec47848eab959282129d22a4bd71c1381ae65f0b6983f92ffad9ff197a704b1"
 
       def install
         bin.install "paclear"
