@@ -5,20 +5,20 @@
 class Paclear < Formula
   desc ""
   homepage ""
-  version "0.0.10"
+  version "0.0.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.10/paclear_Darwin_x86_64.tar.gz"
-      sha256 "29b2a337c627ccbe86cc96eb5a46f7539cf4d808ebb037c49ead7b908712881d"
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.11/paclear_Darwin_x86_64.tar.gz"
+      sha256 "c7c3a6eb8d95d0def2bb8c27bd92911336ed260761e3b9731cfea49e9668792b"
 
       def install
         bin.install "paclear"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.10/paclear_Darwin_arm64.tar.gz"
-      sha256 "513d1970a7eacf7c7245730b53b0effeb79a0754a4c4c6ea3262a7cac71ff68e"
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.11/paclear_Darwin_arm64.tar.gz"
+      sha256 "fd3c5e6580b09b63b5dc2ac0eea12122f641b15a8e3a06af28429713070b8399"
 
       def install
         bin.install "paclear"
@@ -27,17 +27,17 @@ class Paclear < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.10/paclear_Linux_arm64.tar.gz"
-      sha256 "eb726f2aa466e5bf3f0a21d9f8f7291533afef3ce263377c9dca01dc9ddb4113"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.11/paclear_Linux_x86_64.tar.gz"
+      sha256 "d9b7eb8354717219e8350599ed95176c0535d9f4664d1dd17a6671c3af27bcec"
 
       def install
         bin.install "paclear"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.10/paclear_Linux_x86_64.tar.gz"
-      sha256 "0ec47848eab959282129d22a4bd71c1381ae65f0b6983f92ffad9ff197a704b1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.11/paclear_Linux_arm64.tar.gz"
+      sha256 "39133f88b59aba03eb8206fe19f30f90e7c34f3b1d33e0bee7f300b959f84b0f"
 
       def install
         bin.install "paclear"
