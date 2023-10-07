@@ -5,20 +5,20 @@
 class Paclear < Formula
   desc ""
   homepage ""
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.6/paclear_Darwin_x86_64.tar.gz"
-      sha256 "92a44f6381c39bf07becdedd7a13229b03b776d15e5509c5ab3d9cf98e85ee6e"
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.7/paclear_Darwin_x86_64.tar.gz"
+      sha256 "2f527315bba076cdcd2d9d613de9b9db7d32fbbee8e7c451b42c0b4771ef4b07"
 
       def install
         bin.install "paclear"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.6/paclear_Darwin_arm64.tar.gz"
-      sha256 "a8323eb7d97cda07e6b03c1aadc16c815a588559f964de2a658c2fe31863d1de"
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.7/paclear_Darwin_arm64.tar.gz"
+      sha256 "ea94294a76cc87cf40af1b421e6d76465da6e9e47f17e01ec7f56c63dc580713"
 
       def install
         bin.install "paclear"
@@ -28,16 +28,16 @@ class Paclear < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.6/paclear_Linux_arm64.tar.gz"
-      sha256 "131644948a0bfccf87b4a625f61166dba9cbf1d977590459ed274b937e671c79"
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.7/paclear_Linux_arm64.tar.gz"
+      sha256 "9e6c88c0deb4bfffac1b2184fed4178a3a9d5b23d5c01961bea5e35a008c877f"
 
       def install
         bin.install "paclear"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.6/paclear_Linux_x86_64.tar.gz"
-      sha256 "7c8d1730e0fc88342e6e65ae2b256d50cb662497c226416bf9e7508b670334f8"
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.7/paclear_Linux_x86_64.tar.gz"
+      sha256 "ee94a13ab9ba0db8198e65641fcb0dae6c95223d1e60f23b7c828d0847815cab"
 
       def install
         bin.install "paclear"
