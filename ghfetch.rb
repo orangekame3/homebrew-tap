@@ -5,20 +5,20 @@
 class Ghfetch < Formula
   desc ""
   homepage ""
-  version "0.0.14"
+  version "0.0.15"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/ghfetch/releases/download/v0.0.14/ghfetch_Darwin_x86_64.tar.gz"
-      sha256 "3c360904a9de8d59fa1e9ff98cdf6be70f50f3d257529b43605d3b112c2c5b13"
+      url "https://github.com/orangekame3/ghfetch/releases/download/v0.0.15/ghfetch_Darwin_x86_64.tar.gz"
+      sha256 "3f3cf5d0854a4b327c12bd4b0a82a9d680402c43825be5853e666a651c1c64a2"
 
       def install
         bin.install "ghfetch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/ghfetch/releases/download/v0.0.14/ghfetch_Darwin_arm64.tar.gz"
-      sha256 "4ca68a32e4f0898cc4e926c0c67279c3ee28ad933b33da42418c86e9169eeb71"
+      url "https://github.com/orangekame3/ghfetch/releases/download/v0.0.15/ghfetch_Darwin_arm64.tar.gz"
+      sha256 "44f7bb97fd391e3fc8c2799e034c870d93e5a2524e60d709ec945adfe449b300"
 
       def install
         bin.install "ghfetch"
@@ -28,16 +28,16 @@ class Ghfetch < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/ghfetch/releases/download/v0.0.14/ghfetch_Linux_arm64.tar.gz"
-      sha256 "c159ac1dd70bb0a0a4dbdde5612d103a21391ef53132ef9e978369c75e83af9d"
+      url "https://github.com/orangekame3/ghfetch/releases/download/v0.0.15/ghfetch_Linux_arm64.tar.gz"
+      sha256 "8101ee649c3333dffe3a563bde7c97ffa03b938c53ea00118e38981504983563"
 
       def install
         bin.install "ghfetch"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/ghfetch/releases/download/v0.0.14/ghfetch_Linux_x86_64.tar.gz"
-      sha256 "ed57a60bdb46171132907a0b1d06a18c0ce8e6142a0e13d1fcf2c43cb52184ed"
+      url "https://github.com/orangekame3/ghfetch/releases/download/v0.0.15/ghfetch_Linux_x86_64.tar.gz"
+      sha256 "105368032c0e12bd594dbea2514480ae98a14896ced66fd87f42556fdf764336"
 
       def install
         bin.install "ghfetch"
