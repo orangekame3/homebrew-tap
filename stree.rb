@@ -5,20 +5,20 @@
 class Stree < Formula
   desc ""
   homepage ""
-  version "0.0.11"
+  version "0.0.12"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.11/stree_Darwin_x86_64.tar.gz"
-      sha256 "802af20e24c9a5c21f5ee5c9d823e88b5b2a89b891f2b638f478dcff2f8c2457"
+    if Hardware::CPU.arm?
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.12/stree_Darwin_arm64.tar.gz"
+      sha256 "066736c87aa35759676586c55cc085815cda2019ac7cc3b5d533435f52341646"
 
       def install
         bin.install "stree"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.11/stree_Darwin_arm64.tar.gz"
-      sha256 "6e751705b5c830947ed8080fa685c7ae7a3591cc96b69c25d5cebdeb6443fd78"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.12/stree_Darwin_x86_64.tar.gz"
+      sha256 "1609f334d8442c674203be27ddcf7ae084abbb1cdca8f802ebeb99791f2a435f"
 
       def install
         bin.install "stree"
@@ -27,17 +27,17 @@ class Stree < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.11/stree_Linux_x86_64.tar.gz"
-      sha256 "046c90e7615b4461cfe527e55dbc75285900d825a924fcb9f7f4cc4fc649e00f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.12/stree_Linux_arm64.tar.gz"
+      sha256 "62dda8b2482f4580b68f477ff5e64fc07e736321c381dbac0e1a95c976624dfc"
 
       def install
         bin.install "stree"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.11/stree_Linux_arm64.tar.gz"
-      sha256 "9b36d463c3e1adf3971805e51f2ddd56dc72745a4b979c480e85bcfb6e0acde3"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.12/stree_Linux_x86_64.tar.gz"
+      sha256 "1be4cfe2d31cb82baefca89e2de2265316b4bc57b22ac2974ac5fec490a46403"
 
       def install
         bin.install "stree"
