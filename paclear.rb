@@ -5,20 +5,20 @@
 class Paclear < Formula
   desc ""
   homepage ""
-  version "0.0.12"
+  version "0.0.13"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.12/paclear_Darwin_x86_64.tar.gz"
-      sha256 "a60ff179601c5274138790fbf651fe66db7b79aba13985ee8ce26e43f01079c8"
+    if Hardware::CPU.arm?
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.13/paclear_Darwin_arm64.tar.gz"
+      sha256 "0af4374fee34d796fb072c16fdde92df109428ce77861e8e6fce047928c20e3b"
 
       def install
         bin.install "paclear"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.12/paclear_Darwin_arm64.tar.gz"
-      sha256 "9029b01fd55b7b4d0c68b8222b34aa750661f9cabac1e76466acae2393dd4ed9"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.13/paclear_Darwin_x86_64.tar.gz"
+      sha256 "d8302f1493b61831ce74f27fd9a2b9152dc2ace13f3ccd327557ccac1e3ff39d"
 
       def install
         bin.install "paclear"
@@ -27,17 +27,17 @@ class Paclear < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.12/paclear_Linux_x86_64.tar.gz"
-      sha256 "58e9d98e43dc8288d8048ec1b824bf622544f1331758eb130ba36a3613cb3d2e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.13/paclear_Linux_arm64.tar.gz"
+      sha256 "60f61e716572a67b4e2953dbaafadfb764b5b70322f30eceacceab9dd92309fe"
 
       def install
         bin.install "paclear"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/paclear/releases/download/v0.0.12/paclear_Linux_arm64.tar.gz"
-      sha256 "93acfbc6479f6ab03dd93e5bcbda6dc09dd2e9f1dfd23dd2705224ff11f5b957"
+    if Hardware::CPU.intel?
+      url "https://github.com/orangekame3/paclear/releases/download/v0.0.13/paclear_Linux_x86_64.tar.gz"
+      sha256 "3082cbbf91a8a895d8734bd4e664820692c9162fbd602fa3675b7f9240756ac3"
 
       def install
         bin.install "paclear"
