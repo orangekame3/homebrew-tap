@@ -5,20 +5,20 @@
 class Mk < Formula
   desc ""
   homepage ""
-  version "0.0.9"
+  version "0.0.10"
 
   on_macos do
     on_intel do
-      url "https://github.com/orangekame3/mk/releases/download/v0.0.9/mk_0.0.9_darwin_amd64.tar.gz"
-      sha256 "ac93e75c98f3b9bc0a962b8f1a01cd86016649b328720df89614c12979e0ff1b"
+      url "https://github.com/orangekame3/mk/releases/download/v0.0.10/mk_0.0.10_darwin_amd64.tar.gz"
+      sha256 "0ef2163a705ce19eaa8f8c3a46904bf51571ca1a58fd75381a60bc13dec24f63"
 
       def install
         bin.install "mk"
       end
     end
     on_arm do
-      url "https://github.com/orangekame3/mk/releases/download/v0.0.9/mk_0.0.9_darwin_arm64.tar.gz"
-      sha256 "683e019145459bd2951b26813effb26a3aac9a2c2d521a4f1fd6a98d98f53c11"
+      url "https://github.com/orangekame3/mk/releases/download/v0.0.10/mk_0.0.10_darwin_arm64.tar.gz"
+      sha256 "c6c5384b3ce42a33cde32faf7e25611e076511142374f0734062e50a52bdb517"
 
       def install
         bin.install "mk"
@@ -29,8 +29,8 @@ class Mk < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/orangekame3/mk/releases/download/v0.0.9/mk_0.0.9_linux_amd64.tar.gz"
-        sha256 "f3b2f7a556664038c41f0f268705d7fd2610505d8d4bf877a7cf78c4a9c0d39d"
+        url "https://github.com/orangekame3/mk/releases/download/v0.0.10/mk_0.0.10_linux_amd64.tar.gz"
+        sha256 "4c62b3d76131ff28f96d420654ad79fc9e45a9494172572f0d5958a812d0d28a"
 
         def install
           bin.install "mk"
@@ -39,8 +39,8 @@ class Mk < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/orangekame3/mk/releases/download/v0.0.9/mk_0.0.9_linux_arm64.tar.gz"
-        sha256 "ebd408b9a6effd4a915cc6dbd6dabca4c98f91f01bf3ba7960eb2d0dec857eb9"
+        url "https://github.com/orangekame3/mk/releases/download/v0.0.10/mk_0.0.10_linux_arm64.tar.gz"
+        sha256 "bae2f76034303b967194601b12b7703fc399415f1725f141ea81b88c14166581"
 
         def install
           bin.install "mk"
