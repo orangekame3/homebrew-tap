@@ -5,20 +5,20 @@
 class Stree < Formula
   desc ""
   homepage ""
-  version "0.0.12"
+  version "0.0.14"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.12/stree_Darwin_arm64.tar.gz"
-      sha256 "066736c87aa35759676586c55cc085815cda2019ac7cc3b5d533435f52341646"
+    on_intel do
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.14/stree_0.0.14_darwin_amd64.tar.gz"
+      sha256 "28809bb3ea7033b85a93633440ec8a2370ea8e5b5117e35932bcd467590d9a96"
 
       def install
         bin.install "stree"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.12/stree_Darwin_x86_64.tar.gz"
-      sha256 "1609f334d8442c674203be27ddcf7ae084abbb1cdca8f802ebeb99791f2a435f"
+    on_arm do
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.14/stree_0.0.14_darwin_arm64.tar.gz"
+      sha256 "9ddc9e5a300cfc2e57338b3fe67495b17fd88c1409ab110540f87c20d231b36a"
 
       def install
         bin.install "stree"
@@ -27,20 +27,24 @@ class Stree < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.12/stree_Linux_arm64.tar.gz"
-      sha256 "62dda8b2482f4580b68f477ff5e64fc07e736321c381dbac0e1a95c976624dfc"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/orangekame3/stree/releases/download/v0.0.14/stree_0.0.14_linux_amd64.tar.gz"
+        sha256 "a9a5f25509a20edd97060a5b5fb4c4b1f9b5a1637c8e806a84ed0ec2e6a49c50"
 
-      def install
-        bin.install "stree"
+        def install
+          bin.install "stree"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.12/stree_Linux_x86_64.tar.gz"
-      sha256 "1be4cfe2d31cb82baefca89e2de2265316b4bc57b22ac2974ac5fec490a46403"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/orangekame3/stree/releases/download/v0.0.14/stree_0.0.14_linux_arm64.tar.gz"
+        sha256 "e94bc4bd0ad049fa9c3953f703b288f59830a7aceabebd56d31fdb9e2816a041"
 
-      def install
-        bin.install "stree"
+        def install
+          bin.install "stree"
+        end
       end
     end
   end
