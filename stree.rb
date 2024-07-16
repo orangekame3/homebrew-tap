@@ -5,20 +5,20 @@
 class Stree < Formula
   desc ""
   homepage ""
-  version "0.0.16"
+  version "0.0.17"
 
   on_macos do
     on_intel do
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.16/stree_0.0.16_darwin_amd64.tar.gz"
-      sha256 "fc1fdd1642f4a921ebd6da4d328f2625c3761be92beeeedc8821b98347b4cf7f"
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.17/stree_0.0.17_darwin_amd64.tar.gz"
+      sha256 "26a17cfbadeecf2e5085f713740ae4762c313c58937d0cdfd8735427cf559503"
 
       def install
         bin.install "stree"
       end
     end
     on_arm do
-      url "https://github.com/orangekame3/stree/releases/download/v0.0.16/stree_0.0.16_darwin_arm64.tar.gz"
-      sha256 "bf7c60337132095dea5de8151166d40ecd208d7396f8cb05ee1621afbd8b85eb"
+      url "https://github.com/orangekame3/stree/releases/download/v0.0.17/stree_0.0.17_darwin_arm64.tar.gz"
+      sha256 "cc5bfb6dc040d6164c0dab74880b31938e4b6971d3274adbdcb2cfcf240c9259"
 
       def install
         bin.install "stree"
@@ -29,8 +29,8 @@ class Stree < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/orangekame3/stree/releases/download/v0.0.16/stree_0.0.16_linux_amd64.tar.gz"
-        sha256 "3f51485c9456156360785e1f4f5f4199d8972add69ae3b68e3cd3bc77b385468"
+        url "https://github.com/orangekame3/stree/releases/download/v0.0.17/stree_0.0.17_linux_amd64.tar.gz"
+        sha256 "cc7e0f3b5fb7687e844040eb77d9adb304ff28145f4acbf7deffc8b048b1f040"
 
         def install
           bin.install "stree"
@@ -39,8 +39,8 @@ class Stree < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/orangekame3/stree/releases/download/v0.0.16/stree_0.0.16_linux_arm64.tar.gz"
-        sha256 "f867cf7f36368c1dd08971f4befe2144467f813615d42b8d9d8d335c77e9d944"
+        url "https://github.com/orangekame3/stree/releases/download/v0.0.17/stree_0.0.17_linux_arm64.tar.gz"
+        sha256 "7892a110160ee286a0c840f7bcfb24bfa1e8b12028ead81dd226292cdf6ed18c"
 
         def install
           bin.install "stree"
