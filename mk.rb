@@ -5,20 +5,20 @@
 class Mk < Formula
   desc ""
   homepage ""
-  version "0.0.15"
+  version "0.0.16"
 
   on_macos do
     on_intel do
-      url "https://github.com/orangekame3/mk/releases/download/v0.0.15/mk_0.0.15_darwin_amd64.tar.gz"
-      sha256 "ff559207b453b356ef33d72dd45230ed2b6cc0653ce0e3ae2e820d4bed2080ff"
+      url "https://github.com/orangekame3/mk/releases/download/v0.0.16/mk_0.0.16_darwin_amd64.tar.gz"
+      sha256 "9671ddb476dfb6b4cd82e05f683a5d659492ab9bb5e23f73fc4ff7d57b837991"
 
       def install
         bin.install "mk"
       end
     end
     on_arm do
-      url "https://github.com/orangekame3/mk/releases/download/v0.0.15/mk_0.0.15_darwin_arm64.tar.gz"
-      sha256 "fd2e6bf20b99abd0825c597d437d3daf5ec78bba7015ffd35e513acb007271a7"
+      url "https://github.com/orangekame3/mk/releases/download/v0.0.16/mk_0.0.16_darwin_arm64.tar.gz"
+      sha256 "676912006c2916940de3918424a89b0f4560d6c66e256171bdb53f1abb53d9d5"
 
       def install
         bin.install "mk"
@@ -29,8 +29,8 @@ class Mk < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/orangekame3/mk/releases/download/v0.0.15/mk_0.0.15_linux_amd64.tar.gz"
-        sha256 "cac61ccd9e28bb34f66e9167011dfa628402a051969a735e25030f570d5e36c2"
+        url "https://github.com/orangekame3/mk/releases/download/v0.0.16/mk_0.0.16_linux_amd64.tar.gz"
+        sha256 "615ef3cd0ed76aaa16037ffe23e22b838e94ba52885888c500d84aa3425fffcc"
 
         def install
           bin.install "mk"
@@ -39,8 +39,8 @@ class Mk < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/orangekame3/mk/releases/download/v0.0.15/mk_0.0.15_linux_arm64.tar.gz"
-        sha256 "798e49558ca3f5363a9d624b4a60efa500b7fbaf151977241f9dbf041ad3fb63"
+        url "https://github.com/orangekame3/mk/releases/download/v0.0.16/mk_0.0.16_linux_arm64.tar.gz"
+        sha256 "d3b54ccf2f7d98543c8592abb8d5b9ba617d3b47f3c9601db25e509f8bd1daab"
 
         def install
           bin.install "mk"
