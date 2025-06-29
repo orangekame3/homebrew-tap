@@ -5,21 +5,21 @@
 class Qasmfmt < Formula
   desc "A formatter for OpenQASM 3 files"
   homepage "https://github.com/orangekame3/qasmfmt"
-  version "0.0.9"
+  version "0.0.10"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/qasmfmt/releases/download/v0.0.9/qasmfmt_Darwin_x86_64.tar.gz"
-      sha256 "58309e2ef155949ed60bdb6c3aaf806e3310e83835dac4171f27efcea322f026"
+      url "https://github.com/orangekame3/qasmfmt/releases/download/v0.0.10/qasmfmt_Darwin_x86_64.tar.gz"
+      sha256 "0d7e6c08f52ef6cbf2a908016f3529ad9e4fd30cd1169def278ea8e112ffbab6"
 
       def install
         bin.install "qasmfmt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/qasmfmt/releases/download/v0.0.9/qasmfmt_Darwin_arm64.tar.gz"
-      sha256 "d62a857d4da224db252dd9b7dfe5de3760c2eb997b56cafa61731797e9dbead8"
+      url "https://github.com/orangekame3/qasmfmt/releases/download/v0.0.10/qasmfmt_Darwin_arm64.tar.gz"
+      sha256 "357a154713cf132e97fc173e0992c5d1cd77c91481fd35124a09fb5daf6721d0"
 
       def install
         bin.install "qasmfmt"
@@ -29,15 +29,15 @@ class Qasmfmt < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/qasmfmt/releases/download/v0.0.9/qasmfmt_Linux_x86_64.tar.gz"
-      sha256 "b78c5b70d4bdf5383f9cebb929df96fb89362cad8e1ad637de71c8d59b7c0c7f"
+      url "https://github.com/orangekame3/qasmfmt/releases/download/v0.0.10/qasmfmt_Linux_x86_64.tar.gz"
+      sha256 "09420e68aa24fc0c588a2400253a6f000f7fc450458efb2e69eb69f56a7d6261"
       def install
         bin.install "qasmfmt"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/qasmfmt/releases/download/v0.0.9/qasmfmt_Linux_arm64.tar.gz"
-      sha256 "e56a193f7ecf950f7d414dccc48fee2d91ef3e349599e8180408d202a36d39c5"
+      url "https://github.com/orangekame3/qasmfmt/releases/download/v0.0.10/qasmfmt_Linux_arm64.tar.gz"
+      sha256 "702a3065e73160309da4d277e3bb0a120d97658c603f35992930665c7c0c1a7e"
       def install
         bin.install "qasmfmt"
       end
