@@ -5,21 +5,21 @@
 class Qasmtools < Formula
   desc "QASM tools for formatting, linting, and parsing OpenQASM 3.0 files"
   homepage "https://github.com/orangekame3/qasmtools"
-  version "0.2.13"
+  version "0.2.15"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/qasmtools/releases/download/v0.2.13/qasmtools_Darwin_x86_64.tar.gz"
-      sha256 "cb0653bcbbac34b75e8c384884bfff79099ac8d26ab2108acdd4108ac8d2b899"
+      url "https://github.com/orangekame3/qasmtools/releases/download/v0.2.15/qasmtools_Darwin_x86_64.tar.gz"
+      sha256 "abe82b4a6121ce53002a1386187485c7de1e323b2dfc1e788757aaae9e51d9b1"
 
       def install
         bin.install "qasm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/qasmtools/releases/download/v0.2.13/qasmtools_Darwin_arm64.tar.gz"
-      sha256 "935bcef49925cb5a8ebfbf78e6f4744fd2e1f099f9328b37d6b7c4662250e908"
+      url "https://github.com/orangekame3/qasmtools/releases/download/v0.2.15/qasmtools_Darwin_arm64.tar.gz"
+      sha256 "c8162b401d42d3a9281803e23a9dbd21bf2e19db93361dd9d814a53bc0c2069d"
 
       def install
         bin.install "qasm"
@@ -29,15 +29,15 @@ class Qasmtools < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/qasmtools/releases/download/v0.2.13/qasmtools_Linux_x86_64.tar.gz"
-      sha256 "a303d70fa306da3c5be989550be684eff517d5e3dde0a4ec3b33a4098b703c3f"
+      url "https://github.com/orangekame3/qasmtools/releases/download/v0.2.15/qasmtools_Linux_x86_64.tar.gz"
+      sha256 "4a391f3d9c34b4db3897ffeebd06589e2c72c85b16398eb8cd9ff3db81b3f318"
       def install
         bin.install "qasm"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/qasmtools/releases/download/v0.2.13/qasmtools_Linux_arm64.tar.gz"
-      sha256 "4b359250eb4547362a295a56655133c03fcc037ef04ac6e1eeb2f8b5dd039163"
+      url "https://github.com/orangekame3/qasmtools/releases/download/v0.2.15/qasmtools_Linux_arm64.tar.gz"
+      sha256 "2d54e307646db033b7ba746d8ab46de199f313d113340fff9c195bfed80d29c2"
       def install
         bin.install "qasm"
       end
