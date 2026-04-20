@@ -5,21 +5,21 @@
 class Arq < Formula
   desc "Local arXiv paper index for fzf-driven exploration"
   homepage "https://github.com/orangekame3/arq"
-  version "0.0.16"
+  version "0.0.17"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orangekame3/arq/releases/download/v0.0.16/arq_Darwin_x86_64.tar.gz"
-      sha256 "2d4ec6dba71c99270bcafe89005ec7193634212e16ed9bdcda8ccd425dd5851a"
+      url "https://github.com/orangekame3/arq/releases/download/v0.0.17/arq_Darwin_x86_64.tar.gz"
+      sha256 "b1b6b287b40f70fde306216ff0e56c2c13c8380c88b1baa46988b414cc49767f"
 
       define_method(:install) do
         bin.install "arq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orangekame3/arq/releases/download/v0.0.16/arq_Darwin_arm64.tar.gz"
-      sha256 "65d30a3f9f36c18cb02a6fac4696281345f1affcb3efb4ffb0bf9e35e101fd0b"
+      url "https://github.com/orangekame3/arq/releases/download/v0.0.17/arq_Darwin_arm64.tar.gz"
+      sha256 "56e3abcacdbaf22b0f0952bfac4d60162fda660773581ab8e286e2a07e1553dc"
 
       define_method(:install) do
         bin.install "arq"
@@ -29,15 +29,15 @@ class Arq < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/arq/releases/download/v0.0.16/arq_Linux_x86_64.tar.gz"
-      sha256 "a5d3e8eb10403c295792c3356c9bd4feaf0c9062eb8094ad0bc95fc54713ad02"
+      url "https://github.com/orangekame3/arq/releases/download/v0.0.17/arq_Linux_x86_64.tar.gz"
+      sha256 "644b3ba032c14f42c9e7e43f6205fe18009380ef3413d9d4d1e50865ca3ef09a"
       define_method(:install) do
         bin.install "arq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orangekame3/arq/releases/download/v0.0.16/arq_Linux_arm64.tar.gz"
-      sha256 "9b3afc9de1395e852c3273f0929b52cda55facc602a77056c67421fc616c1648"
+      url "https://github.com/orangekame3/arq/releases/download/v0.0.17/arq_Linux_arm64.tar.gz"
+      sha256 "20a1fc33418f492595245efbc34f449afdaca418afbb80b892efdc251395d57b"
       define_method(:install) do
         bin.install "arq"
       end
