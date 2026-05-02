@@ -1,6 +1,6 @@
 cask "notchpulse" do
-  version "0.1.3"
-  sha256 "f95f7426484a9f088c972751f1405f443e45c9a398aa8450f3dbff8b471f2919"
+  version "0.1.4"
+  sha256 "d052ad66dd856f3805caf711ff767dedbc187dce4d299cca6802915c36c574c9"
 
   url "https://github.com/orangekame3/notchpulse/releases/download/v#{version}/NotchPulse-#{version}-arm64.tar.gz"
   name "NotchPulse"
@@ -11,6 +11,12 @@ cask "notchpulse" do
   depends_on arch: :arm64
 
   app "NotchPulse.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/NotchPulse.app"],
+                   sudo: false
+  end
 
   zap trash: [
     "~/Library/Preferences/com.orangekame3.NotchCPUMonitor.plist",
