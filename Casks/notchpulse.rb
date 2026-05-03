@@ -1,6 +1,6 @@
 cask "notchpulse" do
-  version "0.1.7"
-  sha256 "27c148a3efec0a766824673742887f99926d8ff11d144904ec7009e036cdd960"
+  version "0.1.8"
+  sha256 "2268bf189db454a5081e706ae119e561b082f50f76580455cceacbbb6c4395df"
 
   url "https://github.com/orangekame3/notchpulse/releases/download/v#{version}/NotchPulse-#{version}-arm64.tar.gz"
   name "NotchPulse"
